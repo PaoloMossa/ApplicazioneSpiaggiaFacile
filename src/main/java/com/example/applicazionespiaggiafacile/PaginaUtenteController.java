@@ -498,28 +498,7 @@ public class PaginaUtenteController implements Initializable {
 
     @FXML
     void impostaDataFine(ActionEvent event) {
-
-
-        //Controlla se la data di fine sia stata inserita in seguito a quella di inizio e se la data di inizio è a lei antecedente
-
-//        if (dataInizio.getValue() == null) {
-//            Alert alert = new Alert(Alert.AlertType.ERROR);
-//            alert.setTitle("Errore");
-//            alert.setHeaderText("Inserire prima una data di inizio");
-//            alert.show();
-//            dataFine.setValue(null);
-//        }
-//        else if (dataFine.getValue().isBefore(dataInizio.getValue())) {
-//            Alert alert = new Alert(Alert.AlertType.ERROR);
-//            alert.setTitle("Errore");
-//            alert.setHeaderText("Inserire una data di fine valida");
-//            alert.show();
-//            dataFine.setValue(null);
-//            return;
-//        }
-//        else {
-            System.out.println("Data fine impostata");
-//        }
+        System.out.println("Data fine impostata");
     }
 
     @FXML
@@ -529,51 +508,10 @@ public class PaginaUtenteController implements Initializable {
         if(dataFine.getValue() == null)
             dataFine.setValue(dataInizio.getValue());
 
-        //Controlla che la data scelta sia nel futuro
-
-//        try {
-//            LocalDate d = dataInizio.getValue();
-//            System.out.println(d);
-//            if (d == null || d.isBefore(java.time.LocalDate.now())) {
-//                Alert alert = new Alert(Alert.AlertType.ERROR);
-//                alert.setTitle("Errore");
-//                alert.setHeaderText("Inserire una data di inizio valida");
-//                alert.show();
-//                dataInizio.setValue(null); //FIXME questa riga causa eccezione!!!
-//                //event.consume(); //FIXME questo metodo è probabilmente inutile qua
-//                return;
-//            }
-//
-//        }
-//        catch (Exception e) {
-//            System.out.println(e.getMessage());
-//        }
-
+        
 
         //Per verificare che tutto funzioni
         System.out.println(dataInizio.getValue());
-
-        //In questa variabile sono salvati i posti liberi
-//        Spiaggia sp;
-
-        //ottiene i posti liberi
-//        if (dataFine.getValue() == null) {
-//            sp = spiaggiaDAO.trovaPostiLiberi(dataInizio.getValue());
-//            System.out.println("sp contiene ora i posti liberi");
-//        }
-//        else {
-//            sp = spiaggiaDAO.trovaPostiLiberi(dataInizio.getValue(), dataFine.getValue());
-//        }
-//
-//        //aggiunge i posti disponibili alla lista in alto a sinistra
-//        posti.clear();
-//        List<Integer> i = sp.getPostiLiberi();
-//        System.out.println("Posti liberi: " + i);
-//        posti.addAll(i);
-//
-
-//        System.out.println("Data inizio impostata" + sp);
-
     }
 
     @FXML
